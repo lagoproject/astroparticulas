@@ -1,0 +1,87 @@
+\documentclass[11pt]{article}
+\usepackage[spanish]{babel} 
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{color}
+\renewcommand{\familydefault}{\sfdefault}
+
+\textwidth 17cm
+\textheight 25.8cm
+\voffset -3.0cm
+\hoffset -2.0cm
+
+%\usepackage{pdfpages}
+
+\begin{document}
+\pagestyle{empty}
+{10 Septiembre 2016}
+\begin{center}
+	{\Large \bf Física de Rayos Cósmicos} \\
+{ \large \bf Rayos Cósmicos} \\ {\bf 1er semestre 2016}
+\end{center}
+
+\setcounter{enumi}{0}      %% Offset en numero de problema
+\begin{enumerate}
+	\item Suponiendo que el espectro de rayos cósmicos (RC) sigue una ley de
+		potencias de la forma $j(E)=j_0 E^{\alpha}$, calcule el número total de
+		rayos cósmicos que arriban a la Tierra por año y por km$^2$ en los
+		siguientes rangos de energía:
+		\begin{enumerate}
+			\item $10^{7} \leq E/\mathrm{GeV} \leq 10^{8}$ con $\alpha=-3.3$.
+			\item $10^{7} \leq E/\mathrm{GeV} \leq 10^{8}$ con $\alpha=-3.0$.
+			\item $10^{3} \leq E/\mathrm{GeV} \leq 10^{4}$ con $\alpha=-2.7$.
+		\end{enumerate}
+		en todos los casos obtenga el valor de $j_0$ de los espectros
+		publicados (ver p. ej. espectro en U01C01).
+	\item Verifique que la fuerza de Lorentz relativista puede escribirse en
+		forma covariante como $$ \frac{dp^\mu}{d\tau} = q F^{\mu\nu} u_\nu$$
+		donde $p^\mu$ es el 4-momento, $p^\mu = (\gamma m c, p_x, p_y, p_z)$,
+		$\tau$ es el tiempo propio de la partícula, $F^{\mu\nu}$ es la forma
+		contravariante del tensor de Maxwell y $u_\nu$ es la forma covariante
+		de la 4-velocidad, $u_\nu= \gamma (c, -v_x, -v_y, -v_z)$. Notar que se
+		usó la métrica usual en partículas, $\eta=\mathrm{diag}(1,-1,-1,-1)$.
+	\item Demuestre que el radio de Larmor de una partícula de masa $m$ y
+		carga $q$ que se mueve en presencia de un campo magnético $\vec B$ con
+		velocidad $\vec v$ formando un ángulo $\theta$ con el campo magnético
+		puede escribirse como $$ r= \frac{\gamma m v \sin \theta}{|q|
+		B}.$$Luego, haciendo los cambios de unidades que considere necesarios,
+		pruebe que la expresión anterior puede reescribirse como $$r = 3.3 
+			\left ( \frac{\gamma m c^2}{\mathrm{GeV}} \right )
+			\left ( \frac{v_\perp}{c} \right )
+			\left ( \frac{e}{|q|} \right )
+			\mathrm{\ \ metros}.
+		$$
+	\item Usando las variables de Mandelstam, y en particular
+		$s=E_{\mathrm{CM}}^2$, verifique que la energía de la colisión en el
+		LHC ($13$\,TeV) es igual a $\sim 10^{5}$\,TeV en el sistema de
+		laboratorio (una de las partículas está en reposo, aire).
+	\item Suponiendo que la capacidad de una fuente le permite acelerar
+		protones hasta una energía de corte $E_c = 4\times10^{15}$\,eV.
+		Calcule el espectro combinado (H,He,C,Fe) de la fuente suponiendo que
+		el flujo de 1-Hidrógeno es $\mathcal{F}_{\mathrm{H}} = (1.15\times10^{-5})
+		E^{-2.77}\,\mathrm{m}^{-2}\,\mathrm{sr}^{-1}\,\mathrm{s}^{-1}\,\mathrm{TeV}^{-1}$,
+		el flujo de 4-Helio es  $\mathcal{F}_{\mathrm{He}} = (7.19\times10^{-6})
+		E^{-2.64}\,\mathrm{m}^{-2}\,\mathrm{sr}^{-1}\,\mathrm{s}^{-1}\,\mathrm{TeV}^{-1}$,
+		el flujo de 12-Carbono es $\mathcal{F}_{\mathrm{C}} = (1.06\times10^{-6})
+		E^{-2.66}\,\mathrm{m}^{-2}\,\mathrm{sr}^{-1}\,\mathrm{s}^{-1}\,\mathrm{TeV}^{-1}$, 
+		y el flujo de 56-Hierro es $\mathcal{F}_{\mathrm{Fe}} = (1.78\times10^{-6})
+		E^{-2.6}\,\mathrm{m}^{-2}\,\mathrm{sr}^{-1}\,\mathrm{s}^{-1}\,\mathrm{TeV}^{-1}$.
+	\item Siguiendo los lineamientos de Protheroe\&Clay, 2004, verifique que
+		en el mecanismo de Fermi de 2do orden predice un incremento medio de
+		energía $\langle \Delta E \rangle \simeq 4/3 \beta^2 E$ y un espectro
+		del tipo ley de potencias $J(E) \propto E^{\alpha}$ con $\alpha < -1$.
+		Luego describa los principales inconvenientes de este modelo. Repita
+		lo anterior para el caso del mecanismo de Fermi de primer orden
+		($\langle \Delta E \rangle \simeq 4/3 \beta E$ y $\alpha \simeq -2$).
+	\item Usando el invariante de Mandelstam $s$, verifique los umbrales de energía de los siguientes procesos:
+		\begin{description}
+			\item[Fotoproducción de piones] $p^+ + \gamma_{\mathrm{CMB}} \to p^+ + \pi^0$, $E_{p^+} \gtrsim 30$\,EeV
+			\item[Fotonucleoproducción de piones] $A + \gamma_{\mathrm{CMB}} \to A + \pi^0$, $E_{A} \gtrsim 30 \left ( 1 + m_\pi / \left ( A m_p \right ) \right )$\,EeV. 
+			\item[Fotoproducción de pares] $p^+ + \gamma_{\mathrm{CMB}} \to p^+ + e^+ + e^-$, $E_{p^+} \gtrsim 3$\,EeV
+			\item[Fotonucleoproducción de piones] $A + \gamma_{\mathrm{CMB}} \to A + e^+ + e^-$, $E_{A} \gtrsim 3 \left ( 1 + m_e / \left ( A m_p \right ) \right )$\,EeV.
+		\end{description}
+\end{enumerate}
+
+
+\end{document}

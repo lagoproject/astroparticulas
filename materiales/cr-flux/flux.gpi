@@ -1,0 +1,42 @@
+h(j,g,x,z)=j*(x**(-g))*exp(-x/(z*1e3))*x**2
+e(j,g,x,z)=j*(x**(-g))*x**2
+set xrange [1e-1:1e6]
+set yrange [1e-13:2e-4]
+set grid
+set log
+set xlabel "Energy (TeV)"
+set ylabel "E^2 dN/dE  (m^{-2} sr^{-1} s^{-1} TeV"
+set format x "10^{%L}"
+set format y "10^{%L}"
+set key samplen 1.5 font "Arial, 16"
+
+plot \
+h(1.151e-5,2.77,x,1) w l lw 5 lt 1 lc 1 t "Hydrogen", \
+h(7.19e-6,2.64,x,2.) w l lw 5 lt 2 lc 2 t "Helium", \
+h(8.01e-7,2.64,x,12) w l lw 5 lt 3 lc 3 t "Carbon", \
+h(2.29e-7,2.55,x,16) w l lw 5 lt 4 lc 4 t "Oxygen", \
+h(1.47e-7,2.70,x,20) w l lw 5 lt 5 lc 5 t "Calcium", \
+h(1.78e-6,2.60,x,26) w l lw 5 lt 5 lc 1 t "Iron"
+
+call '/work/asoreyh/tesis/figs/ps.gpi' 'flux00' 'color "Arial, 20"'
+
+replot \
+h(1.151e-5,2.77,x,1.)+h(7.19e-6,2.64,x,2.)+h(1.78e-6,2.60,x,26.)+h(8.01e-7,2.64,x,12)+h(2.29e-7,2.55,x,16)  w l lw 7 lt 1 lc rgb "#000000" t "Galactic flux"
+
+call '/work/asoreyh/tesis/figs/ps.gpi' 'flux01' 'color "Arial, 20"'
+
+replot \
+e(5e-9,2.50,x,1) w l lw 5 lt 1 lc rgb "#aaaaaa" t "Extragalactic protons"
+call '/work/asoreyh/tesis/figs/ps.gpi' 'flux02' 'color "Arial, 20"'
+
+replot \
+h(1.151e-5,2.77,x,1.)+h(7.19e-6,2.64,x,2.)+h(1.78e-6,2.60,x,26.)+h(8.01e-7,2.64,x,12)+h(2.29e-7,2.55,x,16)+e(5e-9,2.5,x,1) w l lw 7 lt 1 lc rgb "navy" t "Total flux"
+call '/work/asoreyh/tesis/figs/ps.gpi' 'flux03' 'color "Arial, 20"'
+plot \
+h(1.151e-5,2.77,x,1.)+h(7.19e-6,2.64,x,2.)+h(1.78e-6,2.60,x,26.)+h(8.01e-7,2.64,x,12)+h(2.29e-7,2.55,x,16)  w l lw 7 lt 1 lc rgb "#000000" t "Galactic flux", \
+e(5e-9,2.50,x,1) w l lw 5 lt 1 lc rgb "#aaaaaa" t "Extragalactic protons", \
+h(1.151e-5,2.77,x,1.)+h(7.19e-6,2.64,x,2.)+h(1.78e-6,2.60,x,26.)+h(8.01e-7,2.64,x,12)+h(2.29e-7,2.55,x,16)+e(5e-9,2.5,x,1) w l lw 7 lt 1 lc rgb "navy" t "Total flux"
+call '/work/asoreyh/tesis/figs/ps.gpi' 'flux04' 'color "Arial, 20"'
+plot \
+h(1.151e-5,2.77,x,1.)+h(7.19e-6,2.64,x,2.)+h(1.78e-6,2.60,x,26.)+h(8.01e-7,2.64,x,12)+h(2.29e-7,2.55,x,16)+e(5e-9,2.5,x,1) w l lw 7 lt 1 lc rgb "navy" t "Total flux"
+call '/work/asoreyh/tesis/figs/ps.gpi' 'flux05' 'color "Arial, 20"'

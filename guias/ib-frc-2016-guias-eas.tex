@@ -1,0 +1,87 @@
+\documentclass[11pt]{article}
+\usepackage[spanish]{babel} 
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{color}
+\renewcommand{\familydefault}{\sfdefault}
+
+\textwidth 17cm
+\textheight 25.8cm
+\voffset -3.0cm
+\hoffset -2.0cm
+
+\begin{document}
+\pagestyle{empty}
+{10 Septiembre 2016}
+\begin{center}
+	{\Large \bf Física de Rayos Cósmicos} \\
+{ \large \bf Rayos Cósmicos} \\ {\bf 1er semestre 2016}
+\end{center}
+
+\setcounter{enumi}{0}      %% Offset en numero de problema
+\begin{enumerate}
+	\item Un modelo más realista para el modelo de Heitler implica suponer que
+		luego de cada capa atmosférica, cuyo espesor es
+		$X_{EM}=37.1$\,g\,cm$^{-2}$, cada partícula produce $g_{\mathrm{EM}}$
+		nuevas partículas. De esta forma, el modelo original de Heitler supone
+		$g_{EM}=2$. Obtenga según este modelo realista los nuevos parámetros de
+		la cascada, $N_{\max}$, $X_{\max}$ y $\Lambda$ ({\it{elongation
+		rate}}), como función de $g_{EM}$. Luego, evalúe esos parámetros para
+		los casos $g_{EM}=2, 6, 13, 20$.
+	\item La atmósfera marciana es una mezcla de gases con la siguiente
+		composición: $96\%$ de CO$_2$, $2\%$ de Ar, $1.8\%$ de N$_2$ y $0.2\%$
+		de O$_2$. Es tan tenue que la presión atmosférica en su superficie es
+		de sólo $0.6$\,hPa (como referencia, la presión atmosférica en la
+		superficie terrestre es $1013.2$\,hPa). Repita los cálculos del punto
+		anterior para el caso de Marte y compare los resultados obtenidos con
+		los de la Tierra. Ayuda: algunos datos adicionales que podrían llegar a
+		usar: masa de Marte: $6.42\times10^{23}$\,kg; radio de Marte:
+		$3400$\,km. El número másico de una mezcla calcula simplemente como un
+		promedio pesado por la fracción de cada constituyente, $\langle A
+		\rangle = \sum_i A_i x_i$. Para el número atómico de la mezcla debe
+		calcularse el número atómico efectivo,
+		$Z_{\mathrm{eff}}=\sqrt[2.94]{\sum_i f_i Z_i^{2.94}}$, donde $Z_i$ es
+		el número atómico del elemento $i$-ésimo y $f_i$ es la fracción de
+		carga de cada elemento (es decir, $f_i=Z_i/\sum_i Z_i$). Por ejemplo,
+		para el caso del agua, H$_2$O, $Z_{\mathrm{eff}}=7.42$.
+	\item El modelo de Glasmaher-Matthews para cascadas hadrónicas es un modelo
+		simple que permite comprender la evolución de una cascada iniciada por
+		un hadrón. Hemos visto en clase el caso de una lluvia atmosférica
+		extendida (EAS) iniciada por un protón de energía $E_p$, donde
+		obtuvimos que la mayor parte de la energía se encuentra en el canal
+		electromagnético ($E_{\mathrm{EM}} = 1 - (E_p/E_\pi)^{\beta_\pi - 1}
+		\simeq 0.9$ para $\beta_\pi=0.85$). Luego, es válido suponer que a
+		primer orden $X_{\max} \simeq X_{\max}^{\mathrm{EM}}$, donde este último
+		término corresponde a la posición del máximo de una cascada equivalente
+		pero iniciada por un fotón de energía $E_\gamma=E_p / (3
+		N_{\mathrm{CH}})$ (esto surge de suponer que en la primer interacción
+		se producen $N_{\mathrm{CH}}$ y $N_{\mathrm{CH}}/2$, que decaen
+		inmediatamente según la reacción $\pi^0 \to 2\gamma$, y luego
+		$N_\gamma=N_{\mathrm{CH}}$). Bajo esta aproximación, demuestre que la
+		posición del máximo para una cascada iniciada por un protón puede
+		aproximarse cómo $X_{\max}^p = X_0 + X_{\max}^{\mathrm{EM}} -
+		126$\,g\,cm$^{-2}$ para $N_{\mathrm{CH}}=10$ y $X_0$ corresponde al
+		punto de primera interacción.
+	\item El modelo de superposición para una EAS iniciada por un hadrón de
+		masa $A$ y energía $E_p$ sostiene que la cascada resultante es
+		equivalente a $A$ cascadas simultáneas iniciadas por sendos protones de
+		energía $E_p/A$.  Este modelo se soporta en el hecho de que a las
+		energías más altas, $E_p \gg m_p$, la energía de ligadura por nucleón
+		(típicamente $B/A\simeq 8.8$\,MeV) es despreciable frente a $E_p/A$.
+		Utilice entonces el modelo de Glasmaher-Matthews combinado con el
+		modelo de superposición para verificar que:
+		\begin{enumerate}
+			\item El número de muones de una lluvia iniciada por un núcleo de
+				hierro ($^{56}$Fe$_{26}$) es $\simeq 50\%$ mayor que el número de
+				muones de una lluvia iniciada por un protón (estrictamente,
+				$N_\mu^A \simeq A^{1-\beta_\pi} N_\mu^p$).
+			\item La posición del máximo puede aproximarse como $X_{\max}^A =
+				X_{\max}^{p} - X_{\mathrm{EM}} \ln A$.
+			\item Las fluctuaciones en la posición del máximo de distintas
+				lluvias con la misma energía del primario son menores para los
+				hierros que para los protones. 
+		\end{enumerate}
+\end{enumerate}
+
+
+\end{document}
